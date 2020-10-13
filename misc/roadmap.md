@@ -1,0 +1,70 @@
+## Short Term Roadmap
+- deep xstate integration
+  - navigation 
+  - "ambient" state machines
+  - "pluggable actions"
+    - send text / email / notification 
+- constraints
+  - specify expressions that must be met against various scopes
+- optimisations
+  - ability to index the results of expressions (e.g. "models") and refer to those in other expressions
+  - full text indexing
+- miscellaneous
+  - core language updates
+    - more syntax sugar
+    - refactor common patterns into operators as they emerge
+  - devtools integration
+  - optimizations
+    - static analysis of expressions
+      - determine simple filters for underlying data stores (`where`, `topic`, etc.)
+    - "fragment" optimization
+    - optimise observable pulse / component rerender
+  - infrastructure updates
+    - no importing vocabulary on consumer - automatically fed from host
+    - improved serialization
+    - improved bootstrap / bundling
+      - automatic hosting of build directory
+    - improved documentation
+    - "one click" container deployment
+    - blog storage API
+  
+## The Horizon
+- typescript integration (interfaces ONLY, no classes, EVER)
+  - message types
+    - eliminates need for topic
+  - vocabulary
+    - currently `stream` (default) and `aggregate` operator types
+      - e.g. `groupBy` applies to stream type but returns an aggregate
+    - add ability for custom operator types
+  - decorators
+    - populate message properties with 
+      - auth info, e.g. user ID
+      - timestamps
+      - etc.
+    - security information
+      - vocabulary requires certain scope to be set
+    - UI hints
+- visual process designers
+  - drag and drop process design
+  - xstate visualizer is a starter
+  - real time representation of current state
+- scale out
+  - BIG (read: FUN) challenge. I know the vague path to glory.
+- security modelling
+  - rich modelling using core language
+  - restrictions over state machines
+- peer to peer with WebRTC
+- IoT
+
+## The Grand Vision
+- language designer, fed by AI processing of plain language specifications
+- WYSIWYG designer, fed by metadata from language designer
+  - a la Sketch, UX that encourages reusable, responsive components
+  - automatic form generation from message metadata
+  - automatic "best practice" theming (e.g. material design)
+  - curated components
+- visual process designer
+- story boards / issue management integrated into every aspect
+- integrated PaaS
+
+- peer to peer social network

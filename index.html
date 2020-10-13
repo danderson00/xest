@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>xest</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Modern Reactive Programming">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'xest',
+      repo: 'https://gitlab.com/danderson00/xest',
+      loadSidebar: true,
+      subMaxLevel: 2,
+      auto2top: true,
+      relativePath: true,
+      markdown: {
+        smartypants: true,
+        renderer: {
+          link: function(href, title, text) {
+            return href.indexOf('https://danderson00.github.io/xest/#') === 0
+              ? `<a href="${href.slice(35)}">${text}</a>`
+              : window.$docsify.markdown.renderer.origin.link(href, title, text)
+          }
+        }
+      },
+      search: {
+        paths: 'auto',
+        placeholder: 'Search'
+      }
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-jsx.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    var owa_baseUrl = 'https://picturemyhistory.com/';
+    var owa_cmds = owa_cmds || [];
+    owa_cmds.push(['setSiteId', '65ad345f5f115ca9c8d2e88d8dd081f6']);
+    owa_cmds.push(['trackPageView']);
+    owa_cmds.push(['trackClicks']);
+
+    (function() {
+      var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true;
+      owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl );
+      _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+      var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s);
+    }());
+    //]]>
+  </script>
+
+  <script type="text/javascript">
+    window.addEventListener('hashchange', () => {
+      setTimeout(() => {
+        window.OWATracker.setPageTitle(document.title)
+        window.OWATracker.trackPageView(window.location.hash.substring(1))
+      }, 500)
+    }, false)
+  </script>
+</body>
+</html>

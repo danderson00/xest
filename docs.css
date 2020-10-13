@@ -1,0 +1,64 @@
+@media screen and (min-width: 1600px) {
+  .app-sub-sidebar {
+    position: fixed;
+    right: 30px;
+    top: 180px;
+    max-width: 200px;
+  }
+}
+
+.app-sub-sidebar li:before {
+  content: '';
+}
+
+.sidebar ul li p.active > a {
+  border-right: 2px solid;
+  color: #42b983;
+  font-weight: 600;
+}
+
+.sidebar ul:not(.app-sub-sidebar) li > p > a {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.sidebar ul ul li {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.sidebar ul ul ul:not(.app-sub-sidebar) > li > a {
+  font-size: 0.9em;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  font-size: 0.8em !important;
+}
+
+h1 a code, h2 a code, h3 a code, h4 a code, h5 a code, h6 a code {
+  font-weight: bold;
+}
+
+a code {
+  font-weight: normal;
+}
+
+.yellowTip {
+  background-color: #fffbea;
+  background-image: url('assets/tip.webp');
+  background-position: 9px;
+  background-repeat: no-repeat;
+  border-left: solid 4px #f1c40f;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 15px 60px;
+}
+
+.search input[type=search] {
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg height='20px' width='20px' viewBox='0 0 24 24' fill='none' stroke='rgba(0, 0, 0, 0.3)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' preserveAspectRatio='xMidYMid meet' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='10.5' r='7.5' vector-effect='non-scaling-stroke'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='15.8' y2='15.8' vector-effect='non-scaling-stroke'%3E%3C/line%3E%3C/svg%3E");
+  background-position: 10px center;
+  background-repeat: no-repeat;
+
+  padding: 0.65em 1em 0.65em 40px;
+}

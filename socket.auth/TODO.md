@@ -1,0 +1,1 @@
+- Clear cached token on auth failure (e.g. different secret)
